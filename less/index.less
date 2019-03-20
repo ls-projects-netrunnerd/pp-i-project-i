@@ -8,7 +8,7 @@ html {
   font-family: @fn;
 
   @media @mw {
-    color: @mx;
+    .mx();
   }
 }
 
@@ -17,6 +17,10 @@ html {
   margin: 0 auto;
 
   width: 69%;
+
+  h1, h2, h3 {
+    .align(center);
+  }
 
   @import 'navigation';
   
