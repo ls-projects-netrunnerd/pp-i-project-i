@@ -134,28 +134,50 @@ html,
 body {
   height: 100%;
 }
+/** devars **/
+/** mixins **/
+/** styles **/
 html {
-  background-color: black;
+  background: black;
   color: white;
   font-family: monospace;
-}
-@media (max-width: 500px) {
-  html {
-    color: green;
-  }
+  font-size: 0.999em;
 }
 .container {
+  line-height: 1.25em;
   margin: 0 auto;
   width: 69%;
 }
-.container h1,
-.container h2,
-.container h3 {
-  text-align: center;
+.container a {
+  color: inherit;
+  transition: background-color 0.5s, color 0.5s;
+}
+.container a:hover {
+  color: seagreen;
 }
 .container nav {
-  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 .container nav a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.container #contact input,
+.container #contact textarea {
+  background: inherit;
+  border: 1px solid white;
   color: inherit;
+  display: block;
+  border-radius: 0;
+  width: 100%;
+}
+.container .tag {
+  border: 1px solid white;
+  border-radius: 0;
+  display: inline-block;
+  padding: 2px 6px;
+  text-transform: uppercase;
 }

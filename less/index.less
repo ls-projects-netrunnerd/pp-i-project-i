@@ -1,35 +1,79 @@
-@import 'mixins';
 @import 'reset';
-@import 'variables';
+
+/** devars **/
+@bg: black;
+@fg: white;
+@fn: monospace;
+@fs: 0.999em;
+
+/** mixins **/
+.align(@alignment: normal) {
+  text-align: @alignment;
+}
+
+.border(@bc: inherit, @bw: 1px, @br: 0) {
+  border: @bw solid @bc;
+  border-radius: @br;
+}
+
+.border-bottom(@bc: inherit, @bw: 1px) {
+  border-bottom: @bw solid @bc;
+}
+
+.muscle(@align: flex-start, @justify: flex-start) {
+  align-items: @align;
+  display: flex;
+  justify-content: @justify;
+}
+
+/** styles **/
 
 html {
-  background-color: @bg;
+  background: @bg;
   color: @fg;
   font-family: @fn;
-
-  @media @mw {
-    .mx();
-  }
+  font-size: @fs;
 }
-
 
 .container {
+  line-height: 1.25em;
   margin: 0 auto;
-
   width: 69%;
 
-  h1, h2, h3 {
-    .align(center);
+  a {
+    color: inherit;
+    transition: background-color 0.5s, color 0.5s;
+
+    &:hover {
+      color: seagreen;
+    }
   }
 
-  @import 'navigation';
-  
-  @import 'intro';
+  nav {
+    .muscle(center, center);
 
-  @import 'toolkit';
+    a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+    }
+  }
 
-  @import 'history';
+  #contact {
+    input, textarea {
+      background: inherit;
+      .border(white);
+      color: inherit;
+      display: block;
+      border-radius: 0;
+      width: 100%;
+    }
+  }
 
-  @import 'contact';
+  .tag {
+    .border(white);
+    display: inline-block;
+    padding: 2px 6px;
+    text-transform: uppercase;
+  }
 }
-
