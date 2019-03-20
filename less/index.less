@@ -5,6 +5,7 @@
 @fg: white;
 @fn: monospace;
 @fs: 0.999em;
+@mq: (max-width: 500px);
 
 /** mixins **/
 .align(@alignment: normal) {
@@ -40,6 +41,10 @@ html {
   margin: 0 auto;
   width: 69%;
 
+  @media @mq {
+    width: 100%;
+  }
+
   a {
     color: inherit;
     transition: background-color 0.5s, color 0.5s;
@@ -52,10 +57,18 @@ html {
   nav {
     .muscle(center, center);
 
+    @media @mq {
+      flex-flow: column;
+    }
+
     a {
       display: block;
       padding: 10px 20px;
       text-decoration: none;
+
+      @media @mq {
+        padding: 5px 10px;
+      }
     }
   }
 

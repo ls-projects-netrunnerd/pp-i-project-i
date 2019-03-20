@@ -148,6 +148,11 @@ html {
   margin: 0 auto;
   width: 69%;
 }
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+}
 .container a {
   color: inherit;
   transition: background-color 0.5s, color 0.5s;
@@ -160,10 +165,20 @@ html {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .container nav {
+    flex-flow: column;
+  }
+}
 .container nav a {
   display: block;
   padding: 10px 20px;
   text-decoration: none;
+}
+@media (max-width: 500px) {
+  .container nav a {
+    padding: 5px 10px;
+  }
 }
 .container #contact input,
 .container #contact textarea {
