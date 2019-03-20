@@ -134,3 +134,17 @@ html,
 body {
   height: 100%;
 }
+html {
+  background-color: black;
+  color: white;
+  font-family: monospace;
+}
+@media (max-width: 500px) {
+  html {
+    color: green;
+  }
+}
+.container {
+  margin: 0 auto;
+  width: 69%;
+}

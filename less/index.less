@@ -1,2 +1,31 @@
+@import 'mixins';
 @import 'reset';
+@import 'variables';
+
+html {
+  background-color: @bg;
+  color: @fg;
+  font-family: @fn;
+
+  @media @mw {
+    color: @mx;
+  }
+}
+
+
+.container {
+  margin: 0 auto;
+
+  width: 69%;
+
+  @import 'navigation';
+  
+  @import 'intro';
+
+  @import 'toolkit';
+
+  @import 'history';
+
+  @import 'contact';
+}
 
