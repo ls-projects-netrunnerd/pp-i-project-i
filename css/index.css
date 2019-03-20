@@ -148,3 +148,14 @@ html {
   margin: 0 auto;
   width: 69%;
 }
+.container h1,
+.container h2,
+.container h3 {
+  text-align: center;
+}
+.container nav {
+  text-align: center;
+}
+.container nav a {
+  color: inherit;
+}
